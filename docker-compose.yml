@@ -1,0 +1,48 @@
+version: "3"
+services:
+  webserver:
+    build: 
+      context: ./dockerfile/apache
+    container_name: 'webserver-sud0su'
+    restart: 'always'
+    ports:
+      - "80:80"
+      - "443:443"
+    links: 
+      - mysql
+    volumes: 
+      - ./www:/var/www/html
+      - ./server/config/php/php.ini:/usr/local/etc/php/php.ini
+      - ./server/config/vhost:/etc/apache2/sites-enabled
+      - ./server/logs/apache:/var/log/apache2
+  mysql:
+    build: ./dockerfile/mysql
+    container_name: 'mysql-sud0su'
+    restart: 'always'
+    ports:
+      - "3306:3306"
+    volumes: 
+      - ./server/data/mysql:/var/lib/mysql
+      - ./server/logs/mysql:/var/log/mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'on'
+      MYSQL_ROOT_PASSWORD: rencong
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: 'phpmyadmin-sud0su'
+    links:
+      - mysql
+    environment:
+     PMA_HOST: mysql
+     PMA_USER: root
+     PMA_PASSWORD: rencong
+    ports:
+      - "8081:80"
+    restart: always
+    volumes: 
+      - /sessions
+  redis:
+    container_name: 'redis-sud0su'
+    image: redis:latest
+    ports:
+      - "6379:6379"
