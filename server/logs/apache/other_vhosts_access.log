@@ -1,1 +1,1 @@
-localhost:80 172.21.0.1 - - [10/Apr/2018:13:04:27 +0000] "GET /fuel_icfaes/home HTTP/1.1" 200 6452 "http://localhost/fuel_icfaes/fuel/dashboard" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+
