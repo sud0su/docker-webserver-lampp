@@ -43,6 +43,6 @@ PhpMyAdmin configured to run on port `8081`, so you can access it from `http://l
 
 #### PHP & MySQL
 
-This local server use `PHP Version 7.1.16` and `5.7.21-1debian9`
+This local server use `PHP Version 7.1.16` and `MySQL 5.7.21-1debian9`
 
 Please check `Dockerfile` at `dockerfile/apache/` to see an extensions that have installed. You can modify a dockerfile to add new extension as you want.
