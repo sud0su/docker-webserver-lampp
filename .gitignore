@@ -1,4 +1,4 @@
 www/fuel_icfaes/
 www/icfaes/
 server/data/mysql/
-server/logs/apache
+*.log
