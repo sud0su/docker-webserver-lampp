@@ -35,14 +35,14 @@ sud0su@oprek$ docker-compose stop
 
 #### Apache
 
-Apache configured to run on default port 80, so you can access it from `http://localhost`
+Apache configured to run on default port `80`, so you can access it from `http://localhost`
 
 #### PhpMyAdmin
 
-PhpMyAdmin configured to run on port 8081, so you can access it from `http://localhost:8081`
+PhpMyAdmin configured to run on port `8081`, so you can access it from `http://localhost:8081`
 
 #### PHP & MySQL
 
 This local server use `PHP Version 7.1.16` and `5.7.21-1debian9`
 
-Please check `Dockerfile` at `dockerfile/apache/` to see a extension that have installed. You can modify a dockerfile to add new extension as you want.
+Please check `Dockerfile` at `dockerfile/apache/` to see a extensions that have installed. You can modify a dockerfile to add new extension as you want.
