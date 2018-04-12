@@ -1,4 +1,3 @@
-www/fuel_icfaes/
-www/icfaes/
+www/
 server/data/mysql/
 *.log
