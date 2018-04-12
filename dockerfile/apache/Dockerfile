@@ -6,6 +6,7 @@ RUN apt-get -y install --fix-missing apt-utils build-essential git curl libssl-d
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN apt-get -y install libmcrypt-dev libsqlite3-dev libsqlite3-0 mysql-client zlib1g-dev libicu-dev zip libfreetype6-dev libjpeg62-turbo-dev libpng12-dev
 RUN docker-php-ext-install mcrypt \
+    && docker-php-ext-install opcache \
     && docker-php-ext-install pdo_mysql \
     && docker-php-ext-install pdo_sqlite \
     && docker-php-ext-install mysqli \
