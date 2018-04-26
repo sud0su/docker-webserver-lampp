@@ -1,4 +1,7 @@
 FROM php:7.1-apache
+MAINTAINER ahmat.raz@gmail.com
+
+# COPY ../../server/config/php/php.ini /usr/local/etc/php/
 
 RUN apt-get -y update --fix-missing
 RUN apt-get upgrade -y
@@ -20,4 +23,8 @@ RUN docker-php-ext-install mcrypt \
     && docker-php-ext-install -j$(nproc) gd
 RUN pecl install xdebug-2.5.0
 RUN docker-php-ext-enable xdebug
+
+# COPY ../../server/config/vhost/default.conf  /etc/apache2/sites-available/
+# COPY ../../server/config/hosts  /etc/hosts
+
 RUN a2enmod rewrite headers
