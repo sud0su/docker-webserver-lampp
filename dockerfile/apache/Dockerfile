@@ -32,4 +32,6 @@ RUN pecl install xdebug && docker-php-ext-enable xdebug
 # COPY ../../server/config/vhost/default.conf  /etc/apache2/sites-available/
 # COPY ../../server/config/hosts  /etc/hosts
 
+#
+
 RUN a2enmod rewrite headers
