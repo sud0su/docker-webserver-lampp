@@ -1,3 +1,4 @@
 www/
 server/data/mysql/
 *.log
+server/logs/
